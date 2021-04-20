@@ -1,0 +1,9 @@
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\bin\Debug\netcoreapp3.1\Aga.DTO.deps.json
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\bin\Debug\netcoreapp3.1\Aga.DTO.dll
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\bin\Debug\netcoreapp3.1\Aga.DTO.pdb
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\obj\Debug\netcoreapp3.1\Aga.DTO.csprojAssemblyReference.cache
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\obj\Debug\netcoreapp3.1\Aga.DTO.AssemblyInfoInputs.cache
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\obj\Debug\netcoreapp3.1\Aga.DTO.AssemblyInfo.cs
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\obj\Debug\netcoreapp3.1\Aga.DTO.csproj.CoreCompileInputs.cache
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\obj\Debug\netcoreapp3.1\Aga.DTO.dll
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DTO\obj\Debug\netcoreapp3.1\Aga.DTO.pdb

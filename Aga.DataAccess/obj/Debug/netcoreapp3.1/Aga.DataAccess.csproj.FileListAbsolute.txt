@@ -1,0 +1,9 @@
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\bin\Debug\netcoreapp3.1\Aga.DataAccess.deps.json
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\bin\Debug\netcoreapp3.1\Aga.DataAccess.dll
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\bin\Debug\netcoreapp3.1\Aga.DataAccess.pdb
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\obj\Debug\netcoreapp3.1\Aga.DataAccess.csprojAssemblyReference.cache
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\obj\Debug\netcoreapp3.1\Aga.DataAccess.AssemblyInfoInputs.cache
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\obj\Debug\netcoreapp3.1\Aga.DataAccess.AssemblyInfo.cs
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\obj\Debug\netcoreapp3.1\Aga.DataAccess.csproj.CoreCompileInputs.cache
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\obj\Debug\netcoreapp3.1\Aga.DataAccess.dll
+D:\All\AllAndEvenMore\Шаг\Angular\Aga\Aga.DataAccess\obj\Debug\netcoreapp3.1\Aga.DataAccess.pdb
