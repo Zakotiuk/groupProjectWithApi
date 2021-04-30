@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-lg-2 col-md-2">
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item">
+        <div class="btn-group">
+          <button class="backMenu btn-lg" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Teachers and doings
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['addTeacher']">Add new one</a>
+            <a class="dropdown-item" [routerLink]="['teachers']">Show all</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="btn-group">
+          <button class="backMenu btn-lg" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Students and doings
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['addStudent']">Add new one</a>
+            <a class="dropdown-item" [routerLink]="['students']">Show all</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="btn-group">
+          <button class="backMenu btn-lg" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tidings   and doings      
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['addNew']">Add new one</a>
+            <a class="dropdown-item" [routerLink]="['news']">Show all</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="btn-group">
+          <button class="backMenu btn-lg" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Courses and doings      
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['addCours']">Add new one</a>
+            <a class="dropdown-item" [routerLink]="['courses']">Show all</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-8 col-md-10 ">
+    <router-outlet></router-outlet>
+  </div>
+</div>

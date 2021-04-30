@@ -11,10 +11,15 @@ export class NavMenuComponent {
   isExpanded = false;
   isLoggetIn: boolean;
   isAdmin: boolean;
+  isTeacher: boolean;
+  isStudent : boolean;
   constructor(private authService: AuthService,
     private router: Router) {
     this.isLoggetIn = this.authService.isLoggetIn();
     this.isAdmin = this.authService.isAdmin();
+    this.isTeacher = this.authService.isTeacher();
+    this.isStudent = this.authService.isStudent();
+
 
     this.authService.loginStatus.subscribe((status)=>{
       this.isLoggetIn = status;

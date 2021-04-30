@@ -36,6 +36,24 @@ namespace Aga.ApiPlusAngular.Helper
                 }).Result;
             }
 
+             roleName = "Student";
+            if (roleManager.FindByNameAsync(roleName).Result == null)
+            {
+                var resultStudentRole = roleManager.CreateAsync(new IdentityRole
+                {
+                    Name = "Student"
+                }).Result;
+            }
+
+            roleName = "Teacher";
+            if (roleManager.FindByNameAsync(roleName).Result == null)
+            {
+                var resultTeacherRole = roleManager.CreateAsync(new IdentityRole
+                {
+                    Name = "Teacher"
+                }).Result;
+            }
+
 
 
 
@@ -45,10 +63,35 @@ namespace Aga.ApiPlusAngular.Helper
                 Email = email,
                 UserName = email,
                 Adress = "Rivne",
+                Age = "30",
+                Fullname = "Full name of admin"
+            };
+
+            email = "student@gmail.com";
+            var student = new User
+            {
+                Email = email,
+                UserName = email,
+                Adress = "Rivne",
                 Age = "15",
                 Fullname = "Aga dobre"
             };
-       
+
+            email = "teacher@gmail.com";
+            var teacher = new User
+            {
+                Email = email,
+                UserName = email,
+                Adress = "Rivne",
+                Age = "20",
+                Fullname = "Aga dobre"
+            };
+            var resultStudent = userManager.CreateAsync(student, "Qwerty-1").Result;
+            resultStudent = userManager.AddToRoleAsync(student, "Student").Result;
+
+            var resultTeacher = userManager.CreateAsync(teacher, "Qwerty-1").Result;
+            resultTeacher = userManager.AddToRoleAsync(teacher, "Teacher").Result;
+
             var resultAdmin = userManager.CreateAsync(admin, "Qwerty1-").Result;
             resultAdmin = userManager.AddToRoleAsync(admin, "Admin").Result;
         }

@@ -1,7 +1,7 @@
 <header>
-  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+  <nav [ngClass]="{blackNav: isTeacher === true}" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-warning bg-warning border-bottom box-shadow mb-3"   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">Aga.ApiPlusAngular</a>
+      <a class="navbar-brand">Smth special</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
         aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
         <span class="navbar-toggler-icon"></span>
@@ -9,13 +9,16 @@
       <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]="{ show: isExpanded }">
         <ul class="navbar-nav flex-grow">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+            <a *ngIf="isAdmin === false && isLoggetIn == true" class="nav-link text-dark" [routerLink]="['/']">Home</a>
           </li>
           <li *ngIf="isAdmin === true && isLoggetIn == true" class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/admin-panel']">Admin panel</a>
           </li>
-          <li *ngIf="isLoggetIn === true && isAdmin == false" class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/user-profile']">User profile</a>
+          <li *ngIf="isLoggetIn === true && isStudent == true" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/student-profile']">User profile</a>
+          </li>
+          <li *ngIf="isLoggetIn === true && isTeacher == true" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/teacher-profile']">Teacher profile</a>
           </li>
 
           <li *ngIf="isLoggetIn === false" class="nav-item" [routerLinkActive]="['link-active']">

@@ -1,0 +1,19 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Image</th>
+      <th scope="col">Doings</th>
+    </tr>
+  </thead>
+<tbody>
+<tr *ngFor="let news of news; let i=index" >
+  <td>{{i+1}}</td>
+<td>{{news.title}}</td>
+<td><img height="50px" width="50px" src= {{news.image}}></td>
+<td><button type="button" (click)="deleteComponent(news.id)" class="btn btn-outline-dark">Delete</button></td>
+
+</tr>
+</tbody>
+</table> 

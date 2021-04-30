@@ -43,8 +43,11 @@ export class LoginComponent implements OnInit {
           if(this.token_data.roles == "Admin"){
             this.router.navigate(['/login-panel'])
           }
-          else if(this.token_data.roles == "User"){
-            this.router.navigate(['/user-profile']);
+          else if(this.token_data.roles == "Student"){
+            this.router.navigate(['/student-profile']);
+          }
+          else if(this.token_data.roles == "Teacher"){
+            this.router.navigate(['/teacher-profile']);
           }
           this.spinner.hide();
         }

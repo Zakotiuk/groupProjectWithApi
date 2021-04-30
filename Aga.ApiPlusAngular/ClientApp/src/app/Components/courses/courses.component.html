@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Description</th>
+      <th scope="col">Id of teacher</th>
+      <th scope="col">Smth</th>
+      <th scope="col">Doings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{course.name}}</td>
+      <td><img height="50px" width="50px" src={{course.image}}> </td>
+      <td>{{course.description}}</td>
+      <td>{{course.idTeacher}}</td>
+      <td>{{course.smth}}</td>
+      <td><button type="button" (click)="deleteComponent(course.id)" class="btn btn-outline-dark">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Aga.DTO.Results.CollectionresultDTO;
 
 namespace Aga.ApiPlusAngular.Controllers
 {
@@ -18,24 +19,24 @@ namespace Aga.ApiPlusAngular.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly EFContext _contxet;
+        private readonly EFContext _context;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IJWTTokenService _JWTTokenService;
 
         public AccountController(EFContext context, UserManager<User> user, SignInManager<User> sign, IJWTTokenService services)
         {
-            _contxet = context;
+            _context = context;
             _userManager = user;
             _signInManager = sign;
             _JWTTokenService = services;
         }
 
         [HttpPost("register")]
-        public async Task< ResultDTO> Register([FromBody] UserRegisterDto model)
+        public async Task<ResultDTO> Register([FromBody] UserRegisterDto model)
         {
-            try {
-
+            try
+            {
                 if (!ModelState.IsValid)
                 {
                     return new ResultErrorDTO
@@ -47,7 +48,8 @@ namespace Aga.ApiPlusAngular.Controllers
                         }
                     };
                 }
-                else {
+                else
+                {
                     var user = new User
                     {
                         UserName = model.Email,
@@ -63,7 +65,7 @@ namespace Aga.ApiPlusAngular.Controllers
                     if (result.Succeeded)
                     {
                         result = _userManager.AddToRoleAsync(user, "User").Result;
-                        _contxet.SaveChanges();
+                        _context.SaveChanges();
 
                         return new ResultDTO
                         {
@@ -71,7 +73,8 @@ namespace Aga.ApiPlusAngular.Controllers
                             Message = "Okk"
                         };
                     }
-                    else {
+                    else
+                    {
                         return new ResultErrorDTO
                         {
                             Code = 405,
@@ -79,12 +82,14 @@ namespace Aga.ApiPlusAngular.Controllers
                             Errors = CustomValidator.GetErrorsByIdentityResult(result)
 
                         };
-                        };
-                    }
-                
+                    };
+                }
+
             }
-            catch (Exception e) {
-                return new ResultErrorDTO {
+            catch (Exception e)
+            {
+                return new ResultErrorDTO
+                {
                     Code = 500,
                     Message = "Error",
                     Errors = new List<string> {
@@ -93,6 +98,28 @@ namespace Aga.ApiPlusAngular.Controllers
                 };
             }
         }
+
+        [HttpGet("students")]
+
+        public CollectionResultDto<StudentDTO> GetStudents()
+        {
+            var students = _context.Students.Select(c => new StudentDTO
+            {
+                Image = c.Image,
+                Name = c.Name,
+                Age = c.Age,
+                IdGroup = c.IdGroup,
+                IsPay = c.IsPay,
+                Id = c.Id
+            }).ToList();
+            return new CollectionResultDto<StudentDTO>
+            {
+                Code = 200,
+                Data = students,
+                Message = "Okk!"
+            };
+        }
+
 
         [HttpPost("login")]
         public async Task<ResultDTO> Login([FromBody] UserLoginDTO model)

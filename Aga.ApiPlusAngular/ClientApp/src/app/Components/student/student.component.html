@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Age</th>
+      <th scope="col">Id of group</th>
+      <th scope="col">isPay</th>
+      <th scope="col">Doings</th>
+    </tr>
+  </thead>
+<tbody>
+<tr *ngFor="let student of students; let i=index">
+  <td>{{i+1}}</td>
+<td>{{student.name}}</td>
+<td><img height="50px" width="50px" src= {{student.image}}></td>
+<td>{{student.age}}</td>
+<td>{{student.idGroup}}</td>
+<td>{{student.isPay}}</td>
+<td><button type="button" (click)="deleteComponent(student.id)" class="btn btn-outline-dark">Delete</button></td>
+</tr>
+</tbody>
+</table> 

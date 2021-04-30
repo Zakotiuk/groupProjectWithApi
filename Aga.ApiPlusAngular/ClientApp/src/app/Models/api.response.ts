@@ -4,3 +4,7 @@ export class Apiresponse{
     public token : string;
     public errors: any;
 }
+
+export class ApiCollectionResponse extends Apiresponse{
+    data!:Array<any>;
+}

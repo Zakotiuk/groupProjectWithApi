@@ -1,0 +1,11 @@
+<div class="form">
+  <form #addEventForm="ngForm" (ngSubmit)="onSubmit(addEventForm)">
+    <input [(ngModel)]="model.name" id="txtTitle" name="txtTitle" type="text" placeholder="title" />
+    <input [(ngModel)]="model.image" id="txtImage" name="txtImage" placeholder="image" />
+    <input [(ngModel)]="model.description" id="txtImage" name="txtImage" placeholder="description" />
+    <input [(ngModel)]="model.idTeacher" id="txtImage" name="txtImage" placeholder="idTeacher" />
+    <input [(ngModel)]="model.smth" id="txtImage" name="txtImage" placeholder="smth" />
+
+    <button>create</button>
+  </form>
+</div>

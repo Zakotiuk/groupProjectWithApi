@@ -38,6 +38,36 @@ export class AuthService {
     }
   }
 
+  isStudent(): boolean {
+    var current_token = localStorage.getItem('token');
+    if (current_token != null) {
+      this.token_data = jwt_decode(current_token);
+      if (this.token_data.roles == "Student") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
+  isTeacher(): boolean {
+    var current_token = localStorage.getItem('token');
+    if (current_token != null) {
+      this.token_data = jwt_decode(current_token);
+      if (this.token_data.roles == "Teacher") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
 
 
   isLoggetIn(): boolean {

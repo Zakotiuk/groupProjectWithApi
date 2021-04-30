@@ -13,5 +13,14 @@ namespace Aga.DataAccess
         {
 
         }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<New> News { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Homework> Homeworks { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<Reward> Rewards { get; set; }
+        public DbSet<StudentReward> StudentRewards { get; set;}
     }
 }
